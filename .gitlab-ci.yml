@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - clean
+
+Build container:
+  stage: build
+  script:
+    - docker build --force-rm -t test_image_${CI_PIPELINE_ID} . -f Dockerfile
+    - docker run --name autotest_container_${CI_PIPELINE_ID} --rm -itd test_image_${CI_PIPELINE_ID}
+  tags:
+    - hs_test
+  when: manual
+
+Optical powers:
+  stage: test
+  script: docker exec autotest_container_${CI_PIPELINE_ID} python3 -m pytest -v tests/functional_tests/azov2s/azov2s_nms/test_line_intfc_setting.py::TestLineOPT::test_transmitter_opt_pw --chs=192.168.31.155 --slot=9
+  tags:
+    - hs_test
+  when: manual
+
+Clean:
+  stage: clean
+  script:
+    - docker stop autotest_container_${CI_PIPELINE_ID}
+  tags:
+    - hs_test
+  when: manual

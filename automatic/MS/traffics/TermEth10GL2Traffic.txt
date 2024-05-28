@@ -1,0 +1,156 @@
+[Interface/Signal]Signal Losses-:SENSe:DATA? ACOUNT:PHYSICAL:SIGNAL:LOSS
+[Interface/Signal]Signal Loss Seconds-:SENSe:DATA? ASECOND:PHYSICAL:SIGNAL:LOSS
+[Interface/Signal]Sync Loss Seconds-:SENSe:DATA? ESECOND:PCS:PHY:SYNC:LOSS
+[Interface/Signal]Link Loss Seconds-:SENSe:DATA? ESECOND:PCS:PHY:LINK:LOSS
+[Interface/Signal]Optical Rx Overload-:SENSe:DATA? CSTATUS:PHYSICAL:OVRLD
+[Interface/Signal]Optical Rx Level (dBm)-:SENSe:DATA? INTEGER:PHYSICAL:LEVEL:DBM
+[Interface/Signal]Optical Tx Level (dBm)-:SENSe:DATA? INTEGER:PHYSICAL:TX:LEVEL:DBM
+[Interface/Signal]Laser Bias Current (mA)-:SENSe:DATA? FLOAT:PHYSICAL:SFP:BIAScurrent
+[Interface/Signal]Freq Measurement Reference-:SENSe:DATA? :CSTATUS:PHYSICAL:CLOCK:EXT:TIMINGSOURCE
+[Interface/Signal]Rx Frequency(Hz)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY
+[Interface/Signal]Rx Freq Deviation (ppm)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY:DEVIATION
+[Interface/Signal]Rx Freq Max Deviation (ppm)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY:MAXIMUM:DEVIATION
+[Interface/Signal]Tx Clock Source-:SENSe:DATA? CSTATUS:PHYSICAL:CLOCK:SOURCE
+[Interface/Signal]Tx Frequency (Hz)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY:TX
+[Interface/Signal]Tx Freq Deviation (ppm)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY:DEVIATION:TX
+[Interface/Signal]Tx Freq Max Deviation (ppm)-:SENSe:DATA? COUNT:PHYSICAL:FREQUENCY:MAXIMUM:DEVIATION:TX
+[Interface/Signal]Local Fault Seconds-:SENSe:DATA? ESECOND:MAC:PHY:LOCAL:FAULT
+[Interface/Signal]Remote Fault Seconds-:SENSe:DATA? ESECOND:MAC:PHY:REMOTE:FAULT
+[Summary/SLA / KPI]Throughput, Current, Rx Mbps, L1-:SENSe:DATA? RATE:MAC:ETH:MBPS
+[Summary/SLA / KPI]Throughput, Current, Tx Mbps, L1-:SENSe:DATA? RATE:MAC:ETH:TX:MBPS
+[Summary/SLA / KPI]Throughput, Current, Rx Mbps, L2-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA
+[Summary/SLA / KPI]Throughput, Current, Tx Mbps, L2-:SENSe:DATA? RATE:MAC:ETH:TX:MBPS:DATA
+[Summary/SLA / KPI]Frame Loss FLR, Lost Frames-:SENSe:DATA? ECOUNT:MAC:PACKET:LOST
+[Summary/SLA / KPI]Frame Loss FLR, Frame Loss Ratio-:SENSe:DATA? RATIO:MAC:PACKET:LOSS
+[Summary/SLA / KPI]Round Trip Delay FD (us), Average-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:AVERAGE
+[Summary/SLA / KPI]Round Trip Delay FD (us), Current-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY
+[Summary/SLA / KPI]Round Trip Delay FD (us), Maximum-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:MAXIMUM
+[Summary/SLA / KPI]Packet Jitter FDV (us), Average-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:MAXIMUM
+[Summary/SLA / KPI]Packet Jitter FDV (us), Max Average-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:MAXIMUM
+[Summary/SLA / KPI]Packet Jitter FDV (us), Peak-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:MAXIMUM
+[Summary/SLA / KPI]Packet Jitter FDV (us), Instantaneous-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:PEAK
+[Ethernet/ L2 Link Stats]Total Util %, Average-:SENSe:DATA? RATIO:MAC:ETH:UTILIZATION:AVERAGE
+[Ethernet/ L2 Link Stats]Total Util %, Current-:SENSe:DATA? RATIO:MAC:ETH:UTILIZATION
+[Ethernet/ L2 Link Stats]Total Util %, Minimum-:SENSe:DATA? RATIO:MAC:ETH:UTILIZATION:MINIMUM
+[Ethernet/ L2 Link Stats]Total Util %, Peak-:SENSe:DATA? RATIO:MAC:ETH:UTILIZATION:MINIMUM
+[Ethernet/ L2 Link Stats]Current Util %, Unicast-:SENSe:DATA? RATE:MAC:ETH:UTILIZATION:UNICAST
+[Ethernet/ L2 Link Stats]Current Util %, Multicast-:SENSe:DATA? RATE:MAC:ETH:UTILIZATION:MULTICAST
+[Ethernet/ L2 Link Stats]Current Util %, Broadcast-:SENSe:DATA? RATE:MAC:ETH:UTILIZATION:BROADCAST
+[Ethernet/ L2 Link Stats]Rx Pause Length (ms), Current-:SENSe:DATA? SECOND:MAC:ETH:PAUSE
+[Ethernet/ L2 Link Stats]Rx Pause Length (ms), Minimum-:SENSe:DATA? SECOND:MAC:ETH:PAUSE:MINIMUM
+[Ethernet/ L2 Link Stats]Rx Pause Length (ms), Maximum-:SENSe:DATA? SECOND:MAC:ETH:PAUSE:MAXIMUM
+[Ethernet/ L2 Link Stats]Frame Rate, Average-:SENSe:DATA? RATE:MAC:ETH:FRAME:AVERAGE
+[Ethernet/ L2 Link Stats]Frame Rate, Current-:SENSe:DATA? RATE:MAC:ETH:FRAME
+[Ethernet/ L2 Link Stats]Frame Rate, Minimum-:SENSe:DATA? RATE:MAC:ETH:FRAME:MINIMUM
+[Ethernet/ L2 Link Stats]Frame Rate, Peak-:SENSe:DATA? RATE:MAC:ETH:FRAME:MAXIMUM
+[Ethernet/ L2 Link Stats]Frame Size, Average-:SENSe:DATA? INTEGER:MAC:ETH:FRAME:LENGTH:AVERAGE
+[Ethernet/ L2 Link Stats]Frame Size, Minimum-:SENSe:DATA? INTEGER:MAC:ETH:FRAME:LENGTH:MINIMUM
+[Ethernet/ L2 Link Stats]Frame Size, Maximum-:SENSe:DATA? INTEGER:MAC:ETH:FRAME:LENGTH:MAXIMUM
+[Ethernet/ L2 Link Stats]Rx Mbps, Cur L1-:SENSe:DATA? RATE:MAC:ETH:MBPS
+[Ethernet/ L2 Link Stats]Rx Mbps, Cur L2-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA
+[Ethernet/ L2 Link Stats]Tx Mbps, Cur L1-:SENSe:DATA? RATE:MAC:ETH:TX:MBPS
+[Ethernet/ L2 Link Stats]Tx Mbps, Cur L2-:SENSe:DATA? RATE:MAC:ETH:TX:MBPS:DATA
+[Ethernet/ L2 Link Stats]Rx Mbps, L1, Average-:SENSe:DATA? RATE:MAC:ETH:MBPS:AVERAGE
+[Ethernet/ L2 Link Stats]Rx Mbps, L1, Current-:SENSe:DATA? RATE:MAC:ETH:MBPS
+[Ethernet/ L2 Link Stats]Rx Mbps, L1, Minimum-:SENSe:DATA? RATE:MAC:ETH:MBPS:MINIMUM
+[Ethernet/ L2 Link Stats]Rx Mbps, L1, Maximum-:SENSe:DATA? RATE:MAC:ETH:MBPS:MAXIMUM
+[Ethernet/ L2 Link Stats]Rx Mbps, L2, Average-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA:AVERAGE
+[Ethernet/ L2 Link Stats]Rx Mbps, L2, Current-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA
+[Ethernet/ L2 Link Stats]Rx Mbps, L2, Minimum-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA:MINIMUM
+[Ethernet/ L2 Link Stats]Rx Mbps, L2, Maximum-:SENSe:DATA? RATE:MAC:ETH:MBPS:DATA:MAXIMUM
+[Ethernet/ L2 Link Stats]ATP, Total Util Cur %-:SENSe:DATA? RATIO:MAC:PACKET:UTILIZATION
+[Ethernet/ L2 Link Stats]ATP, Frame Rate Cur-:SENSe:DATA? RATE:MAC:PACKET
+[Ethernet/ L2 Link Stats]ATP, Rx Mbps, Cur L1-:SENSe:DATA? RATE:MAC:PACKET:ATP:MBPS
+[Ethernet/ L2 Link Stats]ATP, Rx Mbps, Cur L2-:SENSe:DATA? RATE:MAC:PACKET:ATP:MBPS:DATA
+[Ethernet/ L2 Link Stats]Round Trip Delay (us), Average-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:AVERAGE
+[Ethernet/ L2 Link Stats]Round Trip Delay (us), Current-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY
+[Ethernet/ L2 Link Stats]Round Trip Delay (us), Minimum-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:MINIMUM
+[Ethernet/ L2 Link Stats]Round Trip Delay (us), Maximum-:SENSe:DATA? FLOAT:MAC:PACKET:RTDELAY:MAXIMUM
+[Ethernet/ L2 Link Stats]Packet Jitter (us), Average-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER
+[Ethernet/ L2 Link Stats]Packet Jitter (us), Max Average-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:MAXIMUM
+[Ethernet/ L2 Link Stats]Packet Jitter (us), Peak-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:PEAK
+[Ethernet/ L2 Link Stats]Packet Jitter (us), Instantaneous-:SENSe:DATA? FLOAT:MAC:ETH:PACKET:JITTER:INSTANTANEOUS
+[Ethernet/ L2 Link Stats]VLAN ID-:SENSe:DATA? INTEGER:MAC:ETH:FRAME:VLAN:ID
+[Ethernet/ L2 Link Stats]VLAN User Priority-:SENSe:DATA? INTEGER:MAC:ETH:FRAME:VLAN:PRIORITY
+[Ethernet/ L2 Link Stats]Peak Interframe Gap (us)-:SENSe:DATA? ESECOND:MAC:ETH:SDISRUPTION:TIME
+[Ethernet/ L2 Link Counts]Received Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME
+[Ethernet/ L2 Link Counts]Transmitter Frames-:SENSe:DATA? COUNT:MAC:ETH:TX:FRAME
+[Ethernet/ L2 Link Counts]Rx Acterna Frames-:SENSe:DATA? COUNT:MAC:PACKET
+[Ethernet/ L2 Link Counts]Tx Acterna Frames-:SENSe:DATA? COUNT:MAC:PACKET:TX
+[Ethernet/ L2 Link Counts]Pause Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:PAUSE
+[Ethernet/ L2 Link Counts]Rx VLAN Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:VLAN
+[Ethernet/ L2 Link Counts]Rx Q in Q Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:QINQ
+[Ethernet/ L2 Link Counts]Rx Stacked VLAN Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:STACKED
+[Ethernet/ L2 Link Counts]Unicast Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:UCAST
+[Ethernet/ L2 Link Counts]Multicast Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:MCAST
+[Ethernet/ L2 Link Counts]Broadcast Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:BCAST
+[Ethernet/ L2 Link Counts]Rx Frame Bytes-:SENSe:DATA? COUNT:MAC:ETH:FRAME:BYTE
+[Ethernet/ L2 Link Counts]Tx Frame Bytes-:SENSe:DATA? COUNT:MAC:ETH:TX:FRAME:BYTE
+[Ethernet/ L2 Link Counts]Span Tree Frames-:SENSe:DATA? COUNT:MAC:ETH:FRAME:STREE
+[Ethernet/ L2 Link Counts]64 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:64:FRAME
+[Ethernet/ L2 Link Counts]65...127 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:65TO127:FRAME
+[Ethernet/ L2 Link Counts]128...255 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:128TO255:FRAME
+[Ethernet/ L2 Link Counts]256...511 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:256TO511:FRAME
+[Ethernet/ L2 Link Counts]512...1023 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:512TO1023:FRAME
+[Ethernet/ L2 Link Counts]1024< Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:1024TO1518:FRAME
+[Ethernet/ L2 Link Counts]Jumbo Frames-:SENSe:DATA? ECOUNT:MAC:ETH:FRAME:OVERSIZED
+[Ethernet/ L2 Filter Stats] Total Util %, Average-:SENSe:DATA? RATIO:MAC:ETH:FILTER:UTILIZATION:AVERAGE
+[Ethernet/ L2 Filter Stats] Total Util %, Current-:SENSe:DATA? RATIO:MAC:ETH:FILTER:UTILIZATION
+[Ethernet/ L2 Filter Stats] Total Util %, Minimum-:SENSe:DATA? RATIO:MAC:ETH:FILTER:UTILIZATION:MINIMUM
+[Ethernet/ L2 Filter Stats] Total Util %, Peak-:SENSe:DATA? RATIO:MAC:ETH:FILTER:UTILIZATION:MAXIMUM
+[Ethernet/ L2 Filter Stats] Frame Rate, Average-:SENSe:DATA? RATE:MAC:ETH:FILTER:FRAME:AVERAGE
+[Ethernet/ L2 Filter Stats] Frame Rate, Current-:SENSe:DATA? RATE:MAC:ETH:FILTER:FRAME
+[Ethernet/ L2 Filter Stats] Frame Rate, Minimum-:SENSe:DATA? RATE:MAC:ETH:FILTER:FRAME:MINIMUM
+[Ethernet/ L2 Filter Stats] Frame Rate, Peak-:SENSe:DATA? RATE:MAC:ETH:FILTER:FRAME:MAXIMUM
+[Ethernet/ L2 Filter Stats] Frame Size, Average-:SENSe:DATA? INTEGER:MAC:ETH:FILTER:FRAME:LENGTH:AVERAGE
+[Ethernet/ L2 Filter Stats] Frame Size, Minimum-:SENSe:DATA? INTEGER:MAC:ETH:FILTER:FRAME:LENGTH:MINIMUM
+[Ethernet/ L2 Filter Stats] Frame Size, Maximum-:SENSe:DATA? INTEGER:MAC:ETH:FILTER:FRAME:LENGTH:MAXIMUM
+[Ethernet/ L2 Filter Stats] Rx Mbps, Cur L1-:SENSe:DATA? RATE:MAC:ETH:FILTER:MBPS
+[Ethernet/ L2 Filter Stats] Rx Mbps, Cur L2-:SENSe:DATA? RATE:MAC:ETH:FILTER:MBPS:DATA
+[Ethernet/ L2 Filter Stats] Round Trip Delay (us), Average-:SENSe:DATA? FLOAT:MAC:PACKET:FILTER:RTDELAY:AVERAGE
+[Ethernet/ L2 Filter Stats] Round Trip Delay (us), Current-:SENSe:DATA? FLOAT:MAC:PACKET:FILTER:RTDELAY
+[Ethernet/ L2 Filter Stats] Round Trip Delay (us), Minimum-:SENSe:DATA? FLOAT:MAC:PACKET:FILTER:RTDELAY:MINIMUM
+[Ethernet/ L2 Filter Stats] Round Trip Delay (us), Maximum-:SENSe:DATA? FLOAT:MAC:PACKET:FILTER:RTDELAY:MAXIMUM
+[Ethernet/ L2 Filter Stats] Packet Jitter (us), Average-:SENSe:DATA? FLOAT:MAC:ETH:FILTER:PACKET:JITTER
+[Ethernet/ L2 Filter Stats] Packet Jitter (us), Max Average-:SENSe:DATA? FLOAT:MAC:ETH:FILTER:PACKET:JITTER:MAXIMUM
+[Ethernet/ L2 Filter Stats] Packet Jitter (us), Peak-:SENSe:DATA? FLOAT:MAC:ETH:FILTER:PACKET:JITTER:PEAK
+[Ethernet/ L2 Filter Stats] Packet Jitter (us), Instantaneous-:SENSe:DATA? FLOAT:MAC:ETH:FILTER:PACKET:JITTER:INSTANTANEOUS
+[Ethernet/ L2 Filter Stats] VLAN ID-:SENSe:DATA? INTEGER:MAC:ETH:FILTER:VLAN:FRAME:ID
+[Ethernet/ L2 Filter Stats] VLAN User Priority-:SENSe:DATA? INTEGER:MAC:ETH:FILTER:VLAN:FRAME:PRIORITY
+[Ethernet/ L2 Filter Counts] Valid Rx Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME
+[Ethernet/ L2 Filter Counts] Rx Acterna Frames-:SENSe:DATA? COUNT:MAC:PACKET:FILTER
+[Ethernet/ L2 Filter Counts] Rx VLAN Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:VLAN
+[Ethernet/ L2 Filter Counts] Rx Q in Q Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:QINQ
+[Ethernet/ L2 Filter Counts] Rx Stacked Vlan Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:STACKED
+[Ethernet/ L2 Filter Counts] Unicast Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:UCAST
+[Ethernet/ L2 Filter Counts] Multicast Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:MCAST
+[Ethernet/ L2 Filter Counts] Broadcast Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:BCAST
+[Ethernet/ L2 Filter Counts] Span Tree Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:STREE
+[Ethernet/ L2 Filter Counts] Rx Frame Bytes-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:BYTE
+[Ethernet/ L2 Filter Counts] 64 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:64:FRAME
+[Ethernet/ L2 Filter Counts] 65 to 127 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:65TO127:FRAME
+[Ethernet/ L2 Filter Counts] 128 to 255 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:128TO255:FRAME
+[Ethernet/ L2 Filter Counts] 256 to 511 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:256TO511:FRAME
+[Ethernet/ L2 Filter Counts] 512 to 1023 Byte Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:512TO1023:FRAME
+[Ethernet/ L2 Filter Counts] 1024< Jumbo Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:1024TO1518:FRAME
+[Ethernet/ L2 Filter Counts] Jumbo Frames-:SENSe:DATA? COUNT:MAC:ETH:FILTER:FRAME:OVERSIZED
+[Ethernet/ Error Stats] Code Violations-:SENSe:DATA? ECOUNT:PCS:PHY:BER
+[Ethernet/ Error Stats] Code Violation Rate-:SENSe:DATA? ERATE:PCS:PHY:BLOCK
+[Ethernet/ Error Stats] Code Violation Seconds-:SENSe:DATA? ESECOND:PCS:PHY:BLOCK
+[Ethernet/ Error Stats] Undersized Frames-:SENSe:DATA? ECOUNT:MAC:ETH:FRAME:UNDERSIZED
+[Ethernet/ Error Stats] Runts-:SENSe:DATA? ECOUNT:MAC:ETH:RUNT
+[Ethernet/ Error Stats] Jabbers-:SENSe:DATA? ECOUNT:MAC:ETH:JABBER
+[Ethernet/ Error Stats] FCS Errored Frames-:SENSe:DATA? ECOUNT:MAC:ETH:FCS:FRAME
+[Ethernet/ Error Stats] Errored Blocks (PCS)-:SENSe:DATA? ECOUNT:PCS:PHY:BLOCK
+[Ethernet/ Error Stats] Block Sync Losses (PCS)-:SENSe:DATA? ECOUNT:PCS:PHY:BLOCK:SYNC:LOSS
+[Ethernet/ Error Stats] Acterna Payload Errors-:SENSe:DATA? ECOUNT:MAC:PACKET:ATP:PAYLOAD
+[Ethernet/ Error Stats] Packet Error Rate-:SENSe:DATA? ERATE:MAC:PACKET:LOSS
+[Ethernet/ Error Stats] Lost Frames-:SENSe:DATA? ECOUNT:MAC:PACKET:LOST
+[Ethernet/ Error Stats] Frame Loss Ratio-:SENSe:DATA? RATIO:MAC:PACKET:LOSS
+[Ethernet/ Error Stats] OoS Frames-:SENSe:DATA? ECOUNT:MAC:PACKET:OOS
+[Ethernet/ Error Stats] Errored Second-:SENSe:DATA? ESECOND:PERFORMANCE:Ethernet:G826:NE:OOS
+[Ethernet/ Error Stats] Severely Errored Second-:SENSe:DATA? ESECOND:PERFORMANCE:Ethernet:G826:NE:OOS:ES
+[Ethernet/ Error Stats] Unavailable Second-:SENSe:DATA? ESECOND:PERFORMANCE:Ethernet:G826:NE:OOS:UAS
+[Ethernet/ Error Stats] Errored Second Ratio-:SENSe:DATA? ESRATE:PERFORMANCE:Ethernet:G826:NE:OOS
+[Ethernet/ Error Stats] Severely Errored Second Ratio-:SENSe:DATA? ESRATE:PERFORMANCE:Ethernet:G826:NE:OOS:SES
+[Temperature/ All] SFP Module Temperature (C)-:SENSe:DATA? INTEGER:PHYSICAL:TEMPerature:SFP
