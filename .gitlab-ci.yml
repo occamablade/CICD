@@ -1,28 +1,44 @@
+image: python:3.10
+
 stages:
-  - build
   - test
-  - clean
 
-Build container:
-  stage: build
-  script:
-    - docker build --force-rm -t test_image_${CI_PIPELINE_ID} . -f Dockerfile
-    - docker run --name autotest_container_${CI_PIPELINE_ID} --rm -itd test_image_${CI_PIPELINE_ID}
-  tags:
-    - hs_test
-  when: manual
+before_script:
+  - cd C:\Users\bezborodnikov\Desktop\jobs\testing-hs-boards
+  - .\venv\Scripts\activate
+  - pip install -r requirements.txt
+  - pip install pytest-html
 
-Optical powers:
+.test_template:
   stage: test
-  script: docker exec autotest_container_${CI_PIPELINE_ID} python3 -m pytest -v tests/functional_tests/azov2s/azov2s_nms/test_line_intfc_setting.py::TestLineOPT::test_transmitter_opt_pw --chs=192.168.31.155 --slot=9
-  tags:
-    - hs_test
-  when: manual
-
-Clean:
-  stage: clean
   script:
-    - docker stop autotest_container_${CI_PIPELINE_ID}
+    - |
+      if ($env:TEST_SUITE -eq "first_test") {
+        pytest tests/test_first.py
+      } elseif ($env:TEST_SUITE -eq "second_test") {
+        pytest tests/test_second.py
+      } elseif ($env:TEST_SUITE -eq "all_tests") {
+        pytest tests/test_first.py
+        pytest tests/test_second.py
+      }
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: manual
+      allow_failure: true
   tags:
-    - hs_test
-  when: manual
+    - hs
+
+test_first:
+  extends: .test_template
+  variables:
+    TEST_SUITE: first_test
+
+test_second:
+  extends: .test_template
+  variables:
+    TEST_SUITE: second_test
+
+test_all:
+  extends: .test_template
+  variables:
+    TEST_SUITE: all_tests
